@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateTodoTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateTodoLabel_todoId}" for="todoId" />
+                    <h:inputText id="todoId" value="#{todoController.selected.todoId}" title="#{bundle.CreateTodoTitle_todoId}" required="true" requiredMessage="#{bundle.CreateTodoRequiredMessage_todoId}"/>
+                    <h:outputLabel value="#{bundle.CreateTodoLabel_discountCode}" for="discountCode" />
+                    <h:inputText id="discountCode" value="#{todoController.selected.discountCode}" title="#{bundle.CreateTodoTitle_discountCode}" required="true" requiredMessage="#{bundle.CreateTodoRequiredMessage_discountCode}"/>
+                    <h:outputLabel value="#{bundle.CreateTodoLabel_zip}" for="zip" />
+                    <h:inputText id="zip" value="#{todoController.selected.zip}" title="#{bundle.CreateTodoTitle_zip}" required="true" requiredMessage="#{bundle.CreateTodoRequiredMessage_zip}"/>
+                    <h:outputLabel value="#{bundle.CreateTodoLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{todoController.selected.name}" title="#{bundle.CreateTodoTitle_name}" />
+                    <h:outputLabel value="#{bundle.CreateTodoLabel_addressline1}" for="addressline1" />
+                    <h:inputText id="addressline1" value="#{todoController.selected.addressline1}" title="#{bundle.CreateTodoTitle_addressline1}" />
+                    <h:outputLabel value="#{bundle.CreateTodoLabel_addressline2}" for="addressline2" />
+                    <h:inputText id="addressline2" value="#{todoController.selected.addressline2}" title="#{bundle.CreateTodoTitle_addressline2}" />
+                    <h:outputLabel value="#{bundle.CreateTodoLabel_city}" for="city" />
+                    <h:inputText id="city" value="#{todoController.selected.city}" title="#{bundle.CreateTodoTitle_city}" />
+                    <h:outputLabel value="#{bundle.CreateTodoLabel_state}" for="state" />
+                    <h:inputText id="state" value="#{todoController.selected.state}" title="#{bundle.CreateTodoTitle_state}" />
+                    <h:outputLabel value="#{bundle.CreateTodoLabel_phone}" for="phone" />
+                    <h:inputText id="phone" value="#{todoController.selected.phone}" title="#{bundle.CreateTodoTitle_phone}" />
+                    <h:outputLabel value="#{bundle.CreateTodoLabel_fax}" for="fax" />
+                    <h:inputText id="fax" value="#{todoController.selected.fax}" title="#{bundle.CreateTodoTitle_fax}" />
+                    <h:outputLabel value="#{bundle.CreateTodoLabel_email}" for="email" />
+                    <h:inputText id="email" value="#{todoController.selected.email}" title="#{bundle.CreateTodoTitle_email}" />
+                    <h:outputLabel value="#{bundle.CreateTodoLabel_creditLimit}" for="creditLimit" />
+                    <h:inputText id="creditLimit" value="#{todoController.selected.creditLimit}" title="#{bundle.CreateTodoTitle_creditLimit}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{todoController.create}" value="#{bundle.CreateTodoSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{todoController.prepareList}" value="#{bundle.CreateTodoShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateTodoIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

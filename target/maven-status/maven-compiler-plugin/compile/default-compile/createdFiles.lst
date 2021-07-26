@@ -1,0 +1,10 @@
+co\com\jsf\vi\beans\TodoFacade.class
+co\com\jsf\vi\controllers\util\JsfUtil.class
+co\com\jsf\vi\controllers\util\PaginationHelper.class
+co\com\jsf\vi\model\Todo.class
+co\com\jsf\vi\JAXRSConfiguration.class
+co\com\jsf\vi\controllers\TodoController$TodoControllerConverter.class
+co\com\jsf\vi\beans\AbstractFacade.class
+co\com\jsf\vi\controllers\TodoController$1.class
+co\com\jsf\vi\controllers\TodoController.class
+co\com\jsf\vi\resources\JavaEE8Resource.class
